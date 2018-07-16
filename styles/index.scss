@@ -1,2 +1,91 @@
-@import './colors.scss';
-@import './main.scss';
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "main";
+
+
+// gift certificate page
+
+.gift-certificate {
+  color: #fff;
+  .gift-certificate__item {
+    background-color: #384144;
+    margin-bottom: 2px;
+    padding: 64px 35px 20px 29px;
+    position: relative;
+
+    @include mobile {
+      padding: 27px 15px 17px;
+    }
+  }
+
+  .gift-certificate__title {
+    color: #fff;
+    display: block;
+    margin-bottom: 24px;
+    max-width: 225px;
+
+    @include mobile {
+      margin-bottom: 15px;
+      max-width: 145px;
+    }
+  }
+
+  .grid {
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  .gift-certificate__price {
+    order: 2;
+    span {
+      background-color: $darkBrownColor;
+      border-radius: 14px;
+      color: $goldColor;
+      display: block;
+      font-size: 14px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      width: 92px;
+    }
+
+    @include mobile {
+      order: 0;
+    }
+  }
+
+  .gift-certificate__text {
+    font-size: 17px;
+    line-height: 20px;
+
+    @include desktop-only {
+      padding-right: 100px;
+    }
+    @include mobile {
+      margin-top: 12px;
+    }
+  }
+
+  .gift-certificate__logo {
+    position: absolute;
+    right: 32px;
+    top: 24px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

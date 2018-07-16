@@ -1,2 +1,61 @@
-$primary-color: #333;
-$secondary-color: #666;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+//font
+
+$font-family: 'Roboto', sans-serif;
+
+
+//common color
+
+$appleGreenColor: #B7C13D;
+$greenColor: #49AF30;
+$darkGreenColor: #116A29;
+
+$lightBlueColor: #5999F3;
+$blueCololor: #3030AF;
+$blueMagentaColor: #663DC1;
+
+$errorRedColor: #FF0000;
+$dirtyRedColor: #D55353;
+$orchidColor: #CA5084;
+
+$lightAokuchibaColor: #DFC695;
+$aokuchibaColor: #CAA150;
+$darkAokuchibaColor: #AD8C49;
+
+$inputGrayColor: #DCDCDC;
+
+//other color
+
+$qualityRedColor: #FF1F00;
+$goldColor: #D2A03E;
+$darkBrownColor: #463030;
+
+$navGrayColor: #E6E6E6;
+$bgGrayColor: #EDEDED;
+$lightTextGrayColor: #CCCCCC;
+$smTextGrayColor: #A2A0A0;
+$checkboxGrayColor: #C7C7C7;
+
+$inputDarkGrayColor: #707070;
+$someTextGrayColor: #696969;
+$textDarkGrayColor: #4D4D4D;
+
+
+//screens
+
+$media-desktop-only: '(max-width: 1100px) and (min-width: 600px)';
+$media-mobile: '(max-width: 599px)';
+
+
+//grid
+
+$grid-1-1: 100%;
+$grid-1-2: 50%;
+$grid-1-3: 33.3333%;
+$grid-1-5: 20%;
+$grid-2-3: 66.6666%;
+$grid-2-5: 40%;
+$grid-3-5: 60%;
+$grid-4-5: 80%;
+
