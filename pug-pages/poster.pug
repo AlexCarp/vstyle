@@ -1,0 +1,17 @@
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+  title VStyle
+body
+  .container
+    .poster
+      - let num = 3; for(let i = 0; i < num; i++) {
+        .poster__item
+          a(href='#').poster__title Подарочный сертификат
+          .grid
+            .poster__price
+              span от 500 руб.
+            p.poster__text Сертификат на все мероприятия Мариинского театра
+            .poster__logo.logo
+      - }

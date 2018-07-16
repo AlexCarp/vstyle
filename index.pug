@@ -5,13 +5,22 @@ head
   title VStyle
 body
   .container
-    .poster
-      - let num = 3; for(let i = 0; i < num; i++) {
-        .poster__item
-          a(href='#').poster__title Подарочный сертификат
-          .grid
-            .poster__price
-              span от 500 руб.
-            p.poster__text Сертификат на все мероприятия Мариинского театра
-            .poster__logo.logo
-      - }
+    .payment
+      button.payment__btn-close
+      a(href='#').payment__back
+        span.back__arrow
+        span.back__text Выбрать сертификат
+      .payment__logo йиксниираМ ртает
+        span.logo
+      .payment__service-list.grid
+        - let num = 5; for(let i = 1; i < num; i++) {
+        - const content = ['Доставка | 1x1500 | 1500р', 'Сертификат| 2x1000 | 2000р', 'Сертификат| 4x500 | 2000р', 'Сертификат | 3x3000 | 9000р']
+        .service__item(class=`service__item_${i}`)=content[i - 1]
+          span.service__text
+          button.service__btn-close
+        - }
+
+
+
+
+

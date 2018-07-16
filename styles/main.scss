@@ -17,14 +17,23 @@ body {
 
 .logo {
   display: block;
-  height: 82px;
-  width: 76px;
   border-radius: 50%;
   border: 2px solid $goldColor;
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a:focus, button:focus {
+  outline: none;
 }
 
 .grid {

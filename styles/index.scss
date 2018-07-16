@@ -84,7 +84,121 @@
       display: none;
     }
   }
+
+  .logo {
+    height: 82px;
+    width: 76px;
+  }
 }
+
+//payment page
+
+.payment {
+  padding: 43px 62px;
+  position: relative;
+  .payment__logo {
+    color: $goldColor;
+    display: block;
+    font-size: 27px;
+    line-height: 59px;
+    margin-bottom: 59px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 280px;
+    .logo {
+      position: absolute;
+      height: 57px;
+      margin-right: 10px;
+      right: 100%;
+      top: 0;
+      width: 52px;
+    }
+  }
+
+  .payment__btn-close {
+    background-color: $lightTextGrayColor;
+    border-radius: 50%;
+    height: 40px;
+    position: absolute;
+    right: 37px;
+    text-align: center;
+    top: 31px;
+    width: 40px;
+    &:before, &:after {
+      background-color: #fff;
+      border-radius: 1px;
+      content: '';
+      display: inline-block;
+      height: 20px;
+      width: 2px;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      margin-left: -2px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .payment__back {
+    display: block;
+    margin-bottom: 48px;
+    margin-left: -16px;
+    .back__arrow {
+      border: 2px solid $lightTextGrayColor;
+      display: inline-block;
+      height: 16px;
+      margin-right: 20px;
+      vertical-align: middle;
+      width: 16px;
+    }
+
+    .back__text {
+      color: $lightTextGrayColor;
+      vertical-align: middle;
+    }
+  }
+
+  .payment__service-list {
+    justify-content: space-between;
+    .service__item {
+      height: 23px;
+      line-height: 23px;
+      padding-left: 14px;
+      &_1 {
+        background-color: $lightBlueColor;
+      }
+      &_2 {
+        background-color: $orchidColor;
+      }
+      &_3 {
+        background-color: $aokuchibaColor;
+      }
+      &_4 {
+        background-color: $greenColor;
+      }
+    }
+
+    .service__text {
+      color: #fff;
+      font-size: 11px;
+    }
+
+  }
+
+
+
+
+
+
+}
+
 
 
 
