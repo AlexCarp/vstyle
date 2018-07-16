@@ -4,11 +4,11 @@
 @import "main";
 
 
-// gift certificate page
+// poster page
 
-.gift-certificate {
+.poster {
   color: #fff;
-  .gift-certificate__item {
+  .poster__item {
     background-color: #384144;
     margin-bottom: 2px;
     padding: 64px 35px 20px 29px;
@@ -19,13 +19,18 @@
     }
   }
 
-  .gift-certificate__title {
+  .poster__title {
     color: #fff;
     display: block;
+    font-size: 35px;
+    letter-spacing: 0.5px;
+    line-height: 41px;
     margin-bottom: 24px;
     max-width: 225px;
 
     @include mobile {
+      font-size: 23px;
+      line-height: 27px;
       margin-bottom: 15px;
       max-width: 145px;
     }
@@ -39,7 +44,7 @@
     }
   }
 
-  .gift-certificate__price {
+  .poster__price {
     order: 2;
     span {
       background-color: $darkBrownColor;
@@ -58,7 +63,7 @@
     }
   }
 
-  .gift-certificate__text {
+  .poster__text {
     font-size: 17px;
     line-height: 20px;
 
@@ -70,7 +75,7 @@
     }
   }
 
-  .gift-certificate__logo {
+  .poster__logo {
     position: absolute;
     right: 32px;
     top: 24px;

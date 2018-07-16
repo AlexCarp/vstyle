@@ -15,17 +15,6 @@ body {
   margin: 100px auto;
 }
 
-h2, .lg-title {
-  font-size: 35px;
-  letter-spacing: 0.5px;
-  line-height: 41px;
-
-  @include mobile {
-    font-size: 23px;
-    line-height: 27px;
-  }
-}
-
 .logo {
   display: block;
   height: 82px;

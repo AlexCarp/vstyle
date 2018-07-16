@@ -5,16 +5,13 @@ head
   title VStyle
 body
   .container
-    .gift-certificate
-      - for (let i=0; i<3; i++) {
-        .gift-certificate__item
-          a(href='#').gift-certificate__title.lg-title Подарочный сертификат
+    .poster
+      - let num = 3; for(let i = 0; i < num; i++) {
+        .poster__item
+          a(href='#').poster__title Подарочный сертификат
           .grid
-            .gift-certificate__price
+            .poster__price
               span от 500 руб.
-            p.gift-certificate__text Сертификат на все мероприятия Мариинского театра
-            .gift-certificate__logo.logo
+            p.poster__text Сертификат на все мероприятия Мариинского театра
+            .poster__logo.logo
       - }
-
-
-
