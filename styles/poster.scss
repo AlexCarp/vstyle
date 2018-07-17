@@ -1,0 +1,90 @@
+@import "variables";
+@import "mixins";
+
+
+// poster page
+
+.poster {
+  color: #fff;
+  .poster__item {
+    background-color: #384144;
+    margin-bottom: 2px;
+    padding: 64px 35px 20px 29px;
+    position: relative;
+
+    @include mobile {
+      padding: 27px 15px 17px;
+    }
+  }
+
+  .poster__title {
+    color: #fff;
+    display: block;
+    font-size: 35px;
+    letter-spacing: 0.5px;
+    line-height: 41px;
+    margin-bottom: 24px;
+    max-width: 225px;
+
+    @include mobile {
+      font-size: 23px;
+      line-height: 27px;
+      margin-bottom: 15px;
+      max-width: 145px;
+    }
+  }
+
+  .grid {
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  .poster__price {
+    order: 2;
+    span {
+      background-color: $darkBrownColor;
+      border-radius: 14px;
+      color: $goldColor;
+      display: block;
+      font-size: 14px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      width: 92px;
+    }
+
+    @include mobile {
+      order: 0;
+    }
+  }
+
+  .poster__text {
+    font-size: 17px;
+    line-height: 20px;
+
+    @include desktop-only {
+      padding-right: 100px;
+    }
+    @include mobile {
+      margin-top: 12px;
+    }
+  }
+
+  .poster__logo {
+    position: absolute;
+    right: 32px;
+    top: 24px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .logo {
+    height: 82px;
+    width: 76px;
+  }
+}

@@ -26,14 +26,65 @@ a {
   text-decoration: none;
 }
 
-button {
-  background-color: transparent;
+button, input {
+  background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
 
-a:focus, button:focus {
+a:focus, button:focus, button:active, input:focus {
   outline: none;
+}
+
+.btn {
+  background-color: $aokuchibaColor;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+  height: 52px;
+  letter-spacing: 1px;
+  line-height: 52px;
+  max-width: 230px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: $trans;
+  width: 100%;
+  &:hover {
+    background-color: $darkAokuchibaColor;
+  }
+
+  &_unactive {
+    background-color: $lightAokuchibaColor;
+    cursor: not-allowed;
+    &:hover {
+      background-color: $lightAokuchibaColor;
+    }
+  }
+
+  @include mobile {
+    max-width: 338px;
+  }
+}
+
+.btn-close {
+  text-align: center;
+  &:before, &:after {
+    border-radius: 1px;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 2px;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
 }
 
 .grid {
