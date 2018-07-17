@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1c93da1-5571-4011-8122-85072e7dbac0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pug-pages/payment.pug" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/styles/poster.scss" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/index.pug" afterPath="$PROJECT_DIR$/index.pug" />
       <change beforePath="$PROJECT_DIR$/styles/index.scss" afterPath="$PROJECT_DIR$/styles/index.scss" />
-      <change beforePath="$PROJECT_DIR$/styles/main.scss" afterPath="$PROJECT_DIR$/styles/main.scss" />
-      <change beforePath="$PROJECT_DIR$/styles/variables.scss" afterPath="$PROJECT_DIR$/styles/variables.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="57" column="10" lean-forward="false" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+            <state relative-caret-position="546">
+              <caret line="258" column="31" lean-forward="false" selection-start-line="258" selection-start-column="31" selection-end-line="258" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -35,8 +30,8 @@
       <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="52" column="52" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="52" selection-end-column="52" />
+            <state relative-caret-position="195">
+              <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -52,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/main.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="559">
@@ -85,6 +80,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>gift-certificate__</find>
+      <find>tot</find>
     </findStrings>
     <replaceStrings>
       <replace>poster__</replace>
@@ -100,10 +96,10 @@
         <option value="$PROJECT_DIR$/styles/mixins.scss" />
         <option value="$PROJECT_DIR$/styles/poster.scss" />
         <option value="$PROJECT_DIR$/styles/variables.scss" />
-        <option value="$PROJECT_DIR$/index.pug" />
-        <option value="$PROJECT_DIR$/styles/index.scss" />
         <option value="$PROJECT_DIR$/styles/main.scss" />
         <option value="$PROJECT_DIR$/pug-pages/payment.pug" />
+        <option value="$PROJECT_DIR$/index.pug" />
+        <option value="$PROJECT_DIR$/styles/index.scss" />
       </list>
     </option>
   </component>
@@ -119,8 +115,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1008" />
-    <option name="y" value="-157" />
+    <option name="x" value="-1026" />
+    <option name="y" value="-151" />
     <option name="width" value="1008" />
     <option name="height" value="1051" />
   </component>
@@ -237,15 +233,15 @@
       <updated>1531724665712</updated>
       <workItem from="1531724668537" duration="27825000" />
       <workItem from="1531825983526" duration="1155000" />
-      <workItem from="1531828994164" duration="6738000" />
+      <workItem from="1531828994164" duration="8990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35718000" />
+    <option name="totallyTimeSpent" value="37970000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1008" y="-157" width="1008" height="1051" extended-state="0" />
+    <frame x="-1026" y="-151" width="1008" height="1051" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24012157" sideWeight="0.49591598" order="0" side_tool="false" content_ui="combo" />
@@ -398,22 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="57" column="10" lean-forward="false" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/mixins.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -438,14 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="52" column="52" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="52" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pug-pages/payment.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
@@ -458,6 +430,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
           <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="258" column="31" lean-forward="false" selection-start-line="258" selection-start-column="31" selection-end-line="258" selection-end-column="31" />
           <folding />
         </state>
       </provider>

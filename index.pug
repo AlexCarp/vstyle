@@ -12,13 +12,14 @@ body
         span.back__text Выбрать сертификат
       .payment__logo Мариинский театр
         span.logo
-      .payment__service-list.grid
-        - let num = 4; for(let i = 1; i <= num; i++) {
-        - const content = ['Доставка | 1x1500 | 1500р', 'Сертификат| 2x1000 | 2000р', 'Сертификат| 4x500 | 2000р', 'Сертификат | 3x3000 | 9000р']
-        .service__item(class=`service__item_${i}`)
-          span.service__text=content[i - 1]
-          button.service__btn-close.btn-close
-        - }
+      .payment__service-list
+        .service__scroll.grid
+          - let num = 4; for(let i = 1; i <= num; i++) {
+          - const content = ['Доставка | 1x1500 | 1500р', 'Сертификат| 2x1000 | 2000р', 'Сертификат| 4x500 | 2000р', 'Сертификат | 3x3000 | 9000р']
+          .service__item(class=`service__item_${i}`)
+            span.service__text=content[i - 1]
+            button.service__btn-close.btn-close
+          - }
       .payment__term
         p После оплаты вы получите уникальный номер сертификата на указанную вами сумму
       .payment__total.grid
