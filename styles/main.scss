@@ -1,6 +1,15 @@
 @import "variables";
 @import "mixins";
 
+$headerGrayColor: #2b2b2b;
+
+$mainGoldColor: #cba150;
+$mainDarkBgColor: #202020;
+
+$hallSeatColor: #414141;
+$hallSeatCheap: #b08c48;
+$hallSeatMiddle: #613b82;
+$hallSeatExpensive: #075f45;
 
 body {
   font-family: $font-family;
@@ -9,82 +18,12 @@ body {
 }
 
 .container {
-  background-color: #fff;
+  background-color: $mainDarkBgColor;
+  border-radius: 10px;
+  margin: 0 auto;
   max-width: 1100px;
+  overflow: hidden;
   width: 100%;
-  margin: 100px auto;
-}
-
-.logo {
-  display: block;
-  border-radius: 50%;
-  border: 2px solid $goldColor;
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-button, input {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
-}
-
-a:focus, button:focus, button:active, input:focus {
-  outline: none;
-}
-
-.btn {
-  background-color: $aokuchibaColor;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 13px;
-  height: 52px;
-  letter-spacing: 1px;
-  line-height: 52px;
-  max-width: 230px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: $trans;
-  width: 100%;
-  &:hover {
-    background-color: $darkAokuchibaColor;
-  }
-
-  &_unactive {
-    background-color: $lightAokuchibaColor;
-    cursor: not-allowed;
-    &:hover {
-      background-color: $lightAokuchibaColor;
-    }
-  }
-
-  @include mobile {
-    max-width: 338px;
-  }
-}
-
-.btn-close {
-  text-align: center;
-  &:before, &:after {
-    border-radius: 1px;
-    content: '';
-    display: inline-block;
-    height: 20px;
-    width: 2px;
-  }
-
-  &:before {
-    transform: rotate(45deg);
-  }
-
-  &:after {
-    transform: rotate(-45deg);
-  }
 }
 
 .grid {
@@ -115,4 +54,107 @@ a:focus, button:focus, button:active, input:focus {
   }
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: $trans;
+}
+
+button, input {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: $trans;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+a:focus, button:focus, button:active, input:focus {
+  outline: none;
+}
+
+.btn-rectangle {
+  background-color: $aokuchibaColor;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: 13px;
+  height: 52px;
+  letter-spacing: 1px;
+  line-height: 52px;
+  max-width: 230px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: $trans;
+  vertical-align: middle;
+  width: 100%;
+  &:hover {
+    background-color: $darkAokuchibaColor;
+  }
+
+  &_unactive {
+    background-color: $lightAokuchibaColor;
+    cursor: not-allowed;
+    &:hover {
+      background-color: $lightAokuchibaColor;
+    }
+  }
+
+  @include mobile {
+    max-width: 338px;
+  }
+}
+
+.btn-round {
+  border: 1px solid $mainGoldColor;
+  border-radius: 20px;
+  color: $mainGoldColor;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  min-width: 40px;
+  transition: $trans;
+  vertical-align: middle;
+  &:before, &:after {
+    background-color: $mainGoldColor;
+    transition: $trans;
+  }
+
+  &:hover, &:focus {
+    border: 1px solid #fff;
+    color: #fff;
+
+    &:before, &:after {
+      background-color: #fff;
+    }
+  }
+}
+
+.btn-close {
+  text-align: center;
+  &:before, &:after {
+    border-radius: 1px;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    transition: $trans;
+    width: 2px;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    margin-left: -2px;
+    transform: rotate(-45deg);
+  }
+}
+
+.logo {
+  display: block;
+  border-radius: 50%;
+  border: 2px solid $goldColor;
+}
 

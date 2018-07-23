@@ -5,54 +5,157 @@ head
   title VStyle
 body
   .container
-    .payment
-      button.payment__btn-close.btn-close
-      a(href='#').payment__back
-        span.back__arrow
-        span.back__text Выбрать сертификат
-      .payment__logo Мариинский театр
-        span.logo
-      .payment__service-list
-        .service__scroll.grid
-          - let num = 4; for(let i = 1; i <= num; i++) {
-          - const content = ['Доставка | 1x1500 | 1500р', 'Сертификат| 2x1000 | 2000р', 'Сертификат| 4x500 | 2000р', 'Сертификат | 3x3000 | 9000р']
-          .service__item(class=`service__item_${i}`)
-            span.service__text=content[i - 1]
-            button.service__btn-close.btn-close
-          - }
-      .payment__term
-        p После оплаты вы получите уникальный номер сертификата на указанную вами сумму
-      .payment__total.grid
-        .total__item
-          p.total__text Стоимость заказа:
-            span.total__text_strong 14500 руб.
-        .total__item
-          p.total__text Сервисный сбор:
-            span.total__text_strong 145 руб.
-        .total__item
-          p.total__text К оплате:
-            span.total__text_strong 14645 руб.
-      .payment__form
-        .form__promocode
-          button.form__btn-promo.btn У вас есть промокод?
-        .form__data
-          .data__item
-            input(placeholder='Телефон').data__phone.data__input
-            label.data__label
-              input(type='checkbox').data__checkbox
-              span.data__pseudo-checkbox
-                span.data__checkmark
-          .data__item
-            input(placeholder='Email').data__email.data__input
-            label.data__label
-              input(type='checkbox').data__checkbox
-              span.data__pseudo-checkbox
-                span.data__checkmark
-        .form__payment
-          button.form__btn-payment.btn.btn_unactive Оплатить заказ
-          p.form__notification Нажимая кнопку «Перейти к оплате» вы соглашаетесь
-            a(href='#')  с условиями покупки билетов
+    .header.grid
+      a(href='#').header__btn-back.btn-round
+      .header__text Пласидо Доминго на фестивале Звезды Белых Ночей
+          span.header__subtext 24 мая, вторник в 17:00 Мариинский-2
 
+      button.header__btn-parvalue.btn-round Номинал: 5 000 р
+      button.header__btn-lang.btn-round ru
+      button.header__btn-close.btn-close.btn-round
+
+    .hall
+      .hall__table
+        .table__cell
+          .hall__table.hall__group_cheap
+            - let num = 3; for(let i = 1; i <= num; i++) {
+            .table__row
+              .table__cell
+                .hall__seat
+                  .seat
+              .table__cell
+                .hall__seat
+                  .seat
+            - }
+            .table__row
+              .table__cell
+                .hall__seat
+              .table__cell
+                .hall__seat
+            - let num2 = 3; for(let i = 1; i <= num2; i++) {
+            .table__row
+              .table__cell
+                .hall__seat
+                  .seat.seat_free
+              .table__cell
+                .hall__seat
+                  .seat
+            - }
+            .table__row
+              .table__cell
+                .hall__seat
+              .table__cell
+                .hall__seat
+            - let num3 = 2; for(let i = 1; i <= num3; i++) {
+            .table__row
+              .table__cell
+                .hall__seat
+                  .seat
+              .table__cell
+                .hall__seat
+                  .seat.seat_free
+            - }
+
+        .table__cell
+          .hall__table
+            - let num0 = 12; for(let i = 1; i <= num0; i++) {
+              .table__row
+                .table__cell
+                .hall__seat
+            - }
+
+        .table__cell
+          .hall__table.hall__group_cheap
+            - let num4 = 2; for(let i = 1; i <= num4; i++) {
+              .table__row
+              - let num5 = 10; for(let i = 1; i <= num5; i++) {
+                .table__cell
+                  .hall__seat
+                    .seat.seat_free.seat_checked
+                - }
+            - }
+          .hall__table.hall__group_middle
+            - let num6 = 2; for(let i = 1; i <= num6; i++) {
+              .table__row
+              - let num7 = 10; for(let i = 1; i <= num7; i++) {
+                .table__cell
+                  .hall__seat
+                    .seat.seat_free
+                - }
+            - }
+          .hall__table.hall__group_cheap
+            - let num8 = 3; for(let i = 1; i <= num8; i++) {
+              .table__row
+                - let num9 = 10; for(let i = 1; i <= num9; i++) {
+                .table__cell
+                  .hall__seat
+                    .seat.seat_free
+                - }
+            - }
+          .hall__table.hall__group_expensive
+            - let num10 = 3; for(let i = 1; i <= num10; i++) {
+              .table__row
+                - let num11 = 10; for(let i = 1; i <= num11; i++) {
+                .table__cell
+                  .hall__seat
+                    .seat.seat_free
+                - }
+            - }
+          .hall__table.hall__group_expensive
+            - let num12 = 2; for(let i = 1; i <= num12; i++) {
+            .table__row
+              .table__cell
+                .hall__seat
+              - let num13 = 8; for(let i = 1; i <= num13; i++) {
+              .table__cell
+                .hall__seat
+                  .seat.seat_free
+              - }
+              .table__cell
+                .hall__seat
+            - }
+          .table__row
+            - let num00 = 10; for(let i = 1; i <= num00; i++) {
+            .table__cell
+              .hall__seat
+            - }
+
+        .table__cell
+          .hall__table
+            - let num000 = 12; for(let i = 1; i <= num000; i++) {
+              .table__row
+                .table__cell
+                .hall__seat
+            - }
+
+        .table__cell
+          .hall__table.hall__group_cheap
+            - let num14 = 10; for(let i = 1; i <= num14; i++) {
+            .table__row
+              .table__cell
+                .hall__seat
+                  .seat
+              .table__cell
+                .hall__seat
+                  .seat
+            - }
+
+      .hall__table.hall__group_cheap
+        .table__row
+          - let num5 = 16; for(let i = 1; i <= num5; i++) {
+          .table__cell
+            .hall__seat
+              .seat.seat_free
+          - }
+
+    .checkbox
+      label.checkbox__container
+        input(type="checkbox").checkbox__input
+        .checkbox__pseudo-input
+          .checkbox__switch
+            .checkbox__ok
+            .checkbox__text lock fare for 48 hours
+            .checkbox__subtext 3.00 Euro
 
 
 
