@@ -157,5 +157,24 @@ body
             .checkbox__text lock fare for 48 hours
             .checkbox__subtext 3.00 Euro
 
+    .progressBar
+      .progressBar__container
+        .progressBar__line
+        - let numb = 6; for(let i = 1; i <= numb; i++) {
+          .progressBar__circle
+            span.progressBar__label=i
+        - }
+
+      .progressBar__container
+        - let numb2 = 8; for(let i = 1; i <= numb2; i++) {
+          .progressBar__circle
+            span.progressBar__label=i
+          .progressBar__segment
+        - }
+        .progressBar__circle
+          span.progressBar__label 9
+
+
+
 
 
