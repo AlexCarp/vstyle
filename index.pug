@@ -165,14 +165,33 @@ body
             span.progressBar__label=i
         - }
 
-      .progressBar__container
-        - let numb2 = 8; for(let i = 1; i <= numb2; i++) {
+      .progressBar__container.progressBar__container_updated
+        .progressBar__unit
           .progressBar__circle
-            span.progressBar__label=i
+            span.progressBar__label 1
+          .progressBar__text some text
+        .progressBar__segment
+        .progressBar__unit
+          .progressBar__circle
+            span.progressBar__label 2
+          .progressBar__text some text
+        .progressBar__segment
+        .progressBar__unit.progressBar__unit_done
+          .progressBar__circle
+            span.progressBar__label 3
+          .progressBar__text some text
+        .progressBar__segment
+        - let numb2 = 8; for(let i = 4; i <= numb2; i++) {
+          .progressBar__unit
+            .progressBar__circle
+              span.progressBar__label=i
+            .progressBar__text some text
           .progressBar__segment
         - }
-        .progressBar__circle
-          span.progressBar__label 9
+        .progressBar__unit
+          .progressBar__circle
+            span.progressBar__label 9
+          .progressBar__text some text
 
 
 
