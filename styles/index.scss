@@ -257,13 +257,37 @@
     z-index: 0;
     background-color: #ad99bc;
   }
-  &__unit_done ~ &__unit &__circle {
-    background-color: #a778ff;
-  }
-  &__unit_done ~ &__segment {
-    background-color: #ad99bc;
-  }
   &__unit {
+    flex-grow: 1;
+    display: flex;
+    padding-bottom: 37px;
+    &_first {
+      flex-grow: initial;
+    }
+    &_done {
+      .progressBar__segment {
+        &:before {
+          background-color: #94ffbe;
+        }
+      }
+      .progressBar__circle {
+        background-color: #94ffbe;
+        &:before {
+          content: '';
+          height: 7px;
+          background: linear-gradient(to right, #94ffbe 20%, transparent);
+          position: absolute;
+          box-sizing: border-box;
+          left: calc(100% - 3px);
+          width: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 10;
+        }
+      }
+    }
+  }
+  &__unit-container {
     height: 40px;
     text-align: center;
     width: 40px;
@@ -273,12 +297,22 @@
     height: 7px;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    background-color: #9abcab;
+    background-color: #a778ff;
     align-self: center;
+    position: relative;
     margin-left: -1px;
     margin-right: -1px;
-    position: relative;
     z-index: 2;
+    &:before {
+      content: '';
+      height: 100%;
+      background-color: #a778ff;
+      position: absolute;
+      box-sizing: border-box;
+      left: -2px;
+      width: calc(100% + 4px);
+      z-index: 3;
+    }
   }
   &__circle {
     border-radius: 50%;
@@ -287,7 +321,7 @@
     text-align: center;
     width: 40px;
     border: 1px solid #fff;
-    background-color: #94ffbe;
+    background-color: #a778ff;
     position: relative;
   }
   &__label {
@@ -296,6 +330,8 @@
   }
   &__text {
     color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
   }
 }
 
