@@ -244,9 +244,27 @@
     padding: 20px 0;
     position: relative;
   }
+
   &__container_updated {
     padding-bottom: 62px;
+    .progressBar__unit_done {
+      .progressBar__circle {
+        &:after {
+          content: '';
+          height: 7px;
+          background: linear-gradient(to right, #94ffbe 20%, transparent);
+          position: absolute;
+          box-sizing: border-box;
+          width: 10px;
+          top: 50%;
+          transform: translate(100%, -50%);
+          transition: .5s linear;
+          z-index: 4;
+        }
+      }
+    }
   }
+
   &__line {
     position: absolute;
     height: 7px;
@@ -265,6 +283,11 @@
       flex-grow: initial;
     }
     &_done {
+      .progressBar__unit-container {
+        &:after {
+          background: linear-gradient(to right, #94ffbe 20%, transparent);
+        }
+      }
       .progressBar__segment {
         &:before {
           background-color: #94ffbe;
@@ -272,23 +295,12 @@
       }
       .progressBar__circle {
         background-color: #94ffbe;
-        &:before {
-          content: '';
-          height: 7px;
-          background: linear-gradient(to right, #94ffbe 20%, transparent);
-          position: absolute;
-          box-sizing: border-box;
-          left: calc(100% - 3px);
-          width: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          z-index: 10;
-        }
       }
     }
   }
   &__unit-container {
     height: 40px;
+    position: relative;
     text-align: center;
     width: 40px;
   }
@@ -327,11 +339,119 @@
   &__label {
     font-size: 18px;
     color: #fff;
+    position: relative;
+    z-index: 6;
   }
   &__text {
     color: #fff;
     font-size: 14px;
     margin-top: 5px;
+  }
+
+
+  &__container_animated {
+    .progressBar__circle {
+      overflow: hidden;
+    }
+
+    .progressBar__filling-block {
+      background-color: #a778ff;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      &:before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    .progressBar__ready-to-fill {
+      background: linear-gradient(to right, #94ffbe 20%, transparent);
+      box-sizing: border-box;
+      height: 6px;
+      width: 10px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 4;
+    }
+
+    label.progressBar__unit .progressBar__unit-container {
+      cursor: pointer;
+    }
+
+    .progressBar__checkbox {
+      display: none;
+    }
+    .progressBar__checkbox:checked {
+      & ~ .progressBar__segment {
+        .progressBar__filling-block_segment {
+          &:before {
+            animation: filling 2s linear 1;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+
+      & ~ .progressBar__unit-container {
+        .progressBar__ready-to-fill {
+          animation: readyToFill .5s linear 1 4s;
+          animation-fill-mode: forwards;
+        }
+
+        .progressBar__filling-block_circle {
+          &:before {
+            animation: filling 2s linear 1 2s;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+    }
+
+    .progressBar__unit_done {
+      .progressBar__unit-container {
+        .progressBar__ready-to-fill {
+          animation: readyToFill .5s linear 1 1.94s;
+          animation-fill-mode: forwards;
+        }
+      }
+      .progressBar__filling-block_circle  {
+        &:before {
+          animation: filling 2s linear 1;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes filling {
+  from {
+    background-color: #94ffbe;
+    transform: translateX(-100%);
+  }
+
+  to {
+    background-color: #94ffbe;
+    transform: translateX(0);
+  }
+}
+@keyframes readyToFill {
+  from {
+    transform: translate(0, -50%);
+  }
+
+  to {
+    transform: translate(7px, -50%);
   }
 }
 

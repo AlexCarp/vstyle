@@ -158,13 +158,6 @@ body
             .checkbox__subtext 3.00 Euro
 
     .progressBar
-      .progressBar__container
-        .progressBar__line
-        - let numb = 6; for(let i = 1; i <= numb; i++) {
-          .progressBar__circle
-            span.progressBar__label=i
-        - }
-
       .progressBar__container.progressBar__container_updated
         .progressBar__unit.progressBar__unit_first.progressBar__unit_done
           .progressBar__unit-container
@@ -177,13 +170,7 @@ body
             .progressBar__circle
               span.progressBar__label 2
             .progressBar__text some text
-        .progressBar__unit.progressBar__unit_done
-          .progressBar__segment
-          .progressBar__unit-container
-            .progressBar__circle
-              span.progressBar__label 3
-            .progressBar__text some text
-        - let numb2 = 8; for(let i = 4; i <= numb2; i++) {
+        - let numb2 = 8; for(let i = 3; i <= numb2; i++) {
           .progressBar__unit
             .progressBar__segment
             .progressBar__unit-container
@@ -196,6 +183,34 @@ body
           .progressBar__unit-container
             .progressBar__circle
               span.progressBar__label 9
+            .progressBar__text some text
+
+      .progressBar__container.progressBar__container_animated
+        .progressBar__unit.progressBar__unit_first.progressBar__unit_done
+          .progressBar__unit-container
+            .progressBar__ready-to-fill
+            .progressBar__circle
+              .progressBar__filling-block.progressBar__filling-block_circle
+              span.progressBar__label 1
+            .progressBar__text some text
+        label.progressBar__unit
+          input(type="checkbox").progressBar__checkbox
+          .progressBar__segment
+            .progressBar__filling-block.progressBar__filling-block_segment
+          .progressBar__unit-container
+            .progressBar__ready-to-fill
+            .progressBar__circle
+              .progressBar__filling-block.progressBar__filling-block_circle
+                span.progressBar__label 2
+            .progressBar__text some text
+        .progressBar__unit
+          .progressBar__segment
+            .progressBar__filling-block.progressBar__filling-block_segment
+          .progressBar__unit-container
+            .progressBar__ready-to-fill
+            .progressBar__circle
+              .progressBar__filling-block.progressBar__filling-block_circle
+                span.progressBar__label 3
             .progressBar__text some text
 
 
