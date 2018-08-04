@@ -245,32 +245,11 @@
     position: relative;
   }
 
-  &__container_updated {
-    padding-bottom: 62px;
-    .progressBar__unit_done {
-      .progressBar__circle {
-        &:after {
-          content: '';
-          height: 7px;
-          background: linear-gradient(to right, #94ffbe 20%, transparent);
-          position: absolute;
-          box-sizing: border-box;
-          width: 10px;
-          top: 50%;
-          transform: translate(100%, -50%);
-          transition: .5s linear;
-          z-index: 4;
-        }
-      }
-    }
-  }
-
   &__line {
     position: absolute;
     height: 7px;
     left: 2px;
     width: calc(100% - 4px);
-    border: 1px solid #fff;
     top: calc(50% - 3px);
     z-index: 0;
     background-color: #ad99bc;
@@ -279,22 +258,12 @@
     flex-grow: 1;
     display: flex;
     padding-bottom: 37px;
-    &_first {
+    &:first-child {
       flex-grow: initial;
     }
-    &_done {
-      .progressBar__unit-container {
-        &:after {
-          background: linear-gradient(to right, #94ffbe 20%, transparent);
-        }
-      }
-      .progressBar__segment {
-        &:before {
-          background-color: #94ffbe;
-        }
-      }
-      .progressBar__circle {
-        background-color: #94ffbe;
+    &:last-child {
+      .progressBar__ready-to-fill {
+        display: none;
       }
     }
   }
@@ -307,32 +276,20 @@
   &__segment {
     flex-grow: 1;
     height: 7px;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
     background-color: #a778ff;
     align-self: center;
     position: relative;
     margin-left: -1px;
     margin-right: -1px;
     z-index: 2;
-    &:before {
-      content: '';
-      height: 100%;
-      background-color: #a778ff;
-      position: absolute;
-      box-sizing: border-box;
-      left: -2px;
-      width: calc(100% + 4px);
-      z-index: 3;
-    }
   }
   &__circle {
     border-radius: 50%;
     height: 40px;
     line-height: 40px;
+    overflow: hidden;
     text-align: center;
     width: 40px;
-    border: 1px solid #fff;
     background-color: #a778ff;
     position: relative;
   }
@@ -349,109 +306,100 @@
   }
 
 
-  &__container_animated {
-    .progressBar__circle {
-      overflow: hidden;
-    }
-
-    .progressBar__filling-block {
-      background-color: #a778ff;
+  .progressBar__filling-block {
+    background-color: #a778ff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    &:before {
+      background-color: #94ffbe;
+      content: '';
       height: 100%;
       width: 100%;
       position: absolute;
-      overflow: hidden;
       left: 0;
       top: 0;
-      z-index: 5;
-      &:before {
-        content: '';
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
+    }
+  }
+
+  .progressBar__ready-to-fill {
+    background: linear-gradient(to right, #94ffbe 20%, transparent);
+    box-sizing: border-box;
+    height: 6px;
+    left: calc(100% - 3px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    z-index: 4;
+  }
+
+  .progressBar__unit {
+    .progressBar__segment {
+      .progressBar__filling-block {
+        &:before {
+          transform: translateX(-100%);
+          transition: transform 2s linear 2s;
+        }
+      }
+    }
+
+    .progressBar__circle {
+      .progressBar__filling-block {
+        &:before {
+          transition: transform 2s linear;
+          transform: translateX(-100%);
+        }
       }
     }
 
     .progressBar__ready-to-fill {
-      background: linear-gradient(to right, #94ffbe 20%, transparent);
-      box-sizing: border-box;
-      height: 6px;
-      width: 10px;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 4;
+      transform: translate(0, -50%);
+      width: 0;
     }
+  }
 
-    label.progressBar__unit .progressBar__unit-container {
-      cursor: pointer;
-    }
-
-    .progressBar__checkbox {
-      display: none;
-    }
-    .progressBar__checkbox:checked {
-      & ~ .progressBar__segment {
-        .progressBar__filling-block_segment {
-          &:before {
-            animation: filling 2s linear 1;
-            animation-fill-mode: forwards;
-          }
-        }
-      }
-
-      & ~ .progressBar__unit-container {
-        .progressBar__ready-to-fill {
-          animation: readyToFill .5s linear 1 4s;
-          animation-fill-mode: forwards;
-        }
-
-        .progressBar__filling-block_circle {
-          &:before {
-            animation: filling 2s linear 1 2s;
-            animation-fill-mode: forwards;
-          }
-        }
-      }
-    }
-
-    .progressBar__unit_done {
-      .progressBar__unit-container {
-        .progressBar__ready-to-fill {
-          animation: readyToFill .5s linear 1 1.94s;
-          animation-fill-mode: forwards;
-        }
-      }
-      .progressBar__filling-block_circle  {
+  .progressBar__unit:hover {
+    .progressBar__segment {
+      .progressBar__filling-block {
         &:before {
-          animation: filling 2s linear 1;
-          animation-fill-mode: forwards;
+          transform: translateX(0);
+          transition: transform 2s linear;
         }
       }
     }
-  }
-}
 
-@keyframes filling {
-  from {
-    background-color: #94ffbe;
-    transform: translateX(-100%);
-  }
+    .progressBar__circle {
+      .progressBar__filling-block {
+        &:before {
+          transform: translateX(0);
+          transition: transform 2s linear 2s;
+        }
+      }
+    }
 
-  to {
-    background-color: #94ffbe;
-    transform: translateX(0);
-  }
-}
-@keyframes readyToFill {
-  from {
-    transform: translate(0, -50%);
+    .progressBar__ready-to-fill {
+      transition: width .5s linear 3.9s;
+      width: 10px;
+    }
   }
 
-  to {
-    transform: translate(7px, -50%);
+  .progressBar__unit_done {
+    .progressBar__ready-to-fill {
+      width: 10px;
+    }
+
+    .progressBar__circle {
+      .progressBar__filling-block  {
+        &:before {
+          transform: translateX(0);
+        }
+      }
+    }
   }
 }
 
